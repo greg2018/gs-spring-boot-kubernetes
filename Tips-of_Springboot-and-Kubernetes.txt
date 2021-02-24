@@ -1,0 +1,21 @@
+
+# Running Spring Boot Application on Kubernetes Minikube on Windows (Part 1)
+https://dzone.com/articles/running-spring-boot-on-kubernetes-minikube-on-wind
+
+# Quick Guide to Microservices With Kubernetes, Spring Boot 2.0, and Docker
+https://dzone.com/articles/quick-guide-to-microservices-with-kubernetes-sprin
+
+# Quick Guide to Microservices With Kubernetes, Spring Boot 2.0, and Docker
+https://dzone.com/articles/running-spring-boot-application-on-kubernetes-mini
+
+
+https://www.baeldung.com/spring-boot-minikube
+
+https://blog.atomist.com/deploy-your-spring-boot-application-to-kubernetes-in-3-mins/
+
+https://cloud.spring.io/spring-cloud-static/spring-cloud-kubernetes/2.1.0.RC1/single/spring-cloud-kubernetes.html
+
+
+https://github.com/eugenp/tutorials/tree/master/spring-cloud/spring-cloud-kubernetes
+
+C:\UserAppsFive\baeldungWorkspacesTwo\tutorials\spring-cloud\spring-cloud-kubernetes\kubernetes-minikube
