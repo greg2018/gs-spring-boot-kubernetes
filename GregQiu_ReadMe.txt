@@ -36,6 +36,8 @@ kubectl apply -f nodePort-service-deployment.yaml
 
 minikube service demo --url
 
+minikube service kubernetes --url
+
 http://IP_ADDRESS:30001/
 
 
