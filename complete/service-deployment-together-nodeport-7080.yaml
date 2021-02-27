@@ -1,0 +1,57 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo
+spec:
+  selector:
+    app: demo
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 7080
+  type: ClusterIP
+
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo
+  name: demo7080
+spec:
+  ports:
+  - name: 7080-7080
+    port: 7080
+    protocol: TCP
+    nodePort: 30001
+  type: NodePort
+  selector:
+    app: demo
+status:
+  loadBalancer: {}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo
+spec:
+  selector:
+      matchLabels:
+        app: demo
+        tier: backend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: demo
+        tier: backend
+    spec:
+      containers:
+        - name: demo
+          image: gregqiuspringdemo:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 7080
+

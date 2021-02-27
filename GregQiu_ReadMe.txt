@@ -1,7 +1,13 @@
 # 
 https://spring.io/guides/gs/spring-boot-kubernetes/
 
+
+cd /c/UserApps3/kubernetesWorkspaces/gs-spring-boot-kubernetes
+
+
 mvnw.cmd package
+
+mvn package -DskipTests
 
 ls -l target/*.jar
 
@@ -9,8 +15,11 @@ java -jar target/demo-0.0.1-SNAPSHOT.jar
 
 http://localhost:8080/
 
+eval $(minikube -p minikube docker-env)
+
 mvnw spring-boot:build-image
 
+docker build --file=Dockerfile --tag=gregqiuspringdemo:latest --rm=true .
 
 docker tag demo:0.0.1-SNAPSHOT gregqiuSpringguides/demo
 
